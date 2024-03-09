@@ -1,11 +1,10 @@
-import React from "react";
-import Badge from "react-bootstrap/Badge";
-import { Row, Col, Container } from "react-bootstrap";
-import ProgressBar from "react-bootstrap/ProgressBar";
-import "./CareerPaths.css";
+import React, { useState } from "react";
+import Badge from 'react-bootstrap/Badge';
+import { Row, Col, Container, Button } from "react-bootstrap";
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import './CareerPaths.css'
 import SkillProgress from "../landing/SkillProgress";
 import { useSearchParams } from "react-router-dom";
-// import Image from '../../assets/astronaut.svg';
 
 const CareerPaths = () => {
   let [params, _] = useSearchParams();

@@ -22,7 +22,7 @@ function App() {
           className="bg-body-tertiary mb-3 justify-content-center"
         >
           <Container fluid>
-            <Navbar.Brand href="/">Learn-IT-all</Navbar.Brand>
+            <Navbar.Brand className="hk" href="/">LearnITAll</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
