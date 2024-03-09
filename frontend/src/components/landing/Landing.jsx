@@ -1,26 +1,58 @@
-import React from "react";
-import {Row, Image, Col, Container} from "react-bootstrap";
-import './Landing.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import React from 'react';
 
-const Landing = () => {
-    return(
-        <Container className="home">
-            <Row>
-                <Col md={6} sm={12} xs={12} className="text-center px-5">
-                    <Image className="mx-auto w-75 w-md-50" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Red_square.svg" alt="https://upload.wikimedia.org/wikipedia/commons/2/27/Red_square.svg"></Image>
-                    <Container fluid className="text-center w-75 w-md-50 mt-5 p-0">
-                    </Container>
-                </Col>
-                <Col md={6} sm={12} xs={12} className="right-side">
-                    <div>
-                        <p className="large-text">Vânătoarea de comori a început!</p>
-                        <p className="text">Îți place să rezolvi ghicitori, să explorezi noi locuri sau să îți testezi ingeniozitatea printr-o serie de jocuri? Treasure Hunt Bucharest este atât un concurs dedicat persoanelor pasionate de mistere și provocări, cât și o ocazie de a petrece o zi plăcută alături de prieteni.</p>
-                        <a href="/rules">Citește regulamentul!</a>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
-    );
+function Landing() {
+  return (
+    <>
+      {['md'].map((expand) => (
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 justify-content-center">
+          <Container fluid>
+            <Navbar.Brand href="#">Learn-IT-all</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-center flex-grow-1 pe-3">
+                  
+                  <NavDropdown
+                    title={<span style={{color: 'blue'}}>Career Paths</span>}
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action3">Programator</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Astronaut
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action5">
+                      Lică Sămădău
+                    </NavDropdown.Item>
+                    
+                
+                  </NavDropdown>
+                  <Nav.Link href="#action1">Skills</Nav.Link>
+                </Nav>
+                
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+
+
+
+      ))}
+    </>
+  );
 }
 
-export default Landing
+export default Landing;
