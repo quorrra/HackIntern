@@ -88,7 +88,7 @@ const Test = () => {
                             onSubmit={async (values, { setSubmitting }) => {
                                 try {
                                     alert("Am primit solutia ta!");
-                                    window.location.reload()
+                                    window.location.replace("career/astronaut?percentage=70")
                                 } catch(e) {
                                     alert("Ceva nu a mers bine!");
                                 }

@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hk {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.hk-fs {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+.hk-thin {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+.lsp {
+  line-height: 30px;
+}
+
+.column-align {
+  flex-direction: column;
+  justify-content: center;
+}

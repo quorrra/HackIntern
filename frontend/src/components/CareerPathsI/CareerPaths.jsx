@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Badge from 'react-bootstrap/Badge';
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Button } from "react-bootstrap";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import './CareerPaths.css'
 import SkillProgress from "../landing/SkillProgress";
 // import Image from '../../assets/astronaut.svg';
 
 const CareerPaths = () => {
+    const [percentage, setPercentage] = useState(45);
+
     return (
         <Container className="home px-5">
             <div className="px-5">
@@ -16,7 +18,7 @@ const CareerPaths = () => {
             </div>
             <Row>
                 <Col md={6} sm={12} xs={12} className="text-center px-5">
-                    <img className="w-100" src="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" alt="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" />
+                    <img className="w-100" src="" alt="" />
                     <Container fluid className="text-center w-75 w-md-50 mt-5 p-0">
                     </Container>
                 </Col>
@@ -48,12 +50,16 @@ const CareerPaths = () => {
                                 <ProgressBar animated now={45} />
                             </Col>
                         </Row>
+
+                        <Row>
+                            <Button className="py-3 hk-thin" href={"/test"} variant="info">Rezolva urmatorul test!</Button>
+                        </Row>
                     </div>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <SkillProgress now={30} title={"Astronaut"} levels={{
+                    <SkillProgress now={percentage} title={"Astronaut"} levels={{
                         "L1": ["Astronaut"],
                         "L2": ["Racheta"],
                         "L3": ["Space Battle minigame"]

@@ -15,13 +15,13 @@ function Landing() {
       <Container className="p-5">
         <div className="ps-5 pe-2">
           <div className="d-flex justify-content-center gap-5">
-            <div className="ms-6">
-              <img className="pt-5" src={Image} alt="LandingImage" />
+            <div>
+              <img className="w150" src="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" alt="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" />
             </div>
-            <div className="ms-5 py-5 ">
-              <h1 className="pb-5">Learn-IT-all</h1>
-              <h5>
-                În lumea magică a Learn-It-All, copiii devin eroi ai
+            <div className="ms-5 py-5 center-it column-align">
+              <h1 className="pb-5 hk-fs">Learn IT all!</h1>
+              <h5 className="hk-fs lsp pe-5">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;În lumea magică a Learn-It-All, copiii devin eroi ai
                 cunoașterii! Aici, ei își creează propriul lor personaj și își
                 cresc puterile (adică cunoștințele) rezolvând teste distractive
                 și jucându-se. Cu cât trec mai multe teste, cu atât devin mai
