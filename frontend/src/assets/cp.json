@@ -24,6 +24,27 @@
   ],
   "skills": [
     {
+      "Psihologie": {
+        "L1": ["Counseling Psychologist"],
+        "L2": ["Clinical Psychologist"],
+        "L3": ["School Psychologist"]
+      }
+    },
+    {
+      "Manipulare": {
+        "L1": ["Marketing Specialist"],
+        "L2": ["Public Relations Specialist"],
+        "L3": ["Sales Manager"]
+      }
+    },
+    {
+      "Porcarie": {
+        "L1": ["Waste Management Specialist"],
+        "L2": ["Recycling Coordinator"],
+        "L3": ["Sanitation Engineer"]
+      }
+    },
+    {
       "Matematica": {
         "L1": ["Programator"],
         "L2": ["Game developer"],
@@ -34,8 +55,7 @@
       "Logica": {
         "L1": ["Philosopher"],
         "L2": ["Game developer"],
-        "L3": ["Engineer"],
-        "L4": ["a lil special"]
+        "L3": ["Engineer"]
       }
     },
     {
@@ -57,27 +77,6 @@
         "L1": ["Astronaut"],
         "L2": ["Astrophysicist"],
         "L3": ["Space Engineer"]
-      }
-    },
-    {
-      "Psihologie": {
-        "L1": ["Counseling Psychologist"],
-        "L2": ["Clinical Psychologist"],
-        "L3": ["School Psychologist"]
-      }
-    },
-    {
-      "Manipulare": {
-        "L1": ["Marketing Specialist"],
-        "L2": ["Public Relations Specialist"],
-        "L3": ["Sales Manager"]
-      }
-    },
-    {
-      "Porcarie": {
-        "L1": ["Waste Management Specialist"],
-        "L2": ["Recycling Coordinator"],
-        "L3": ["Sanitation Engineer"]
       }
     }
   ]

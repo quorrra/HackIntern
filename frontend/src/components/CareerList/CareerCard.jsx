@@ -4,9 +4,9 @@ import { ListGroup } from "react-bootstrap";
 
 function CareerCard({ title, necessarySkills, imageSrc, careerLink }) {
   return (
-    <Card style={{ width: "18rem", margin: "1rem", padding: 0 }}>
+    <Card style={{ width: "25rem", margin: "1rem", padding: 0 }}>
       <Card.Img
-        style={{ objectFit: "cover", height: "12rem" }}
+        style={{ objectFit: "cover", height: "18rem" }}
         src={imageSrc}
       />
       <Card.Body>

@@ -1,57 +1,68 @@
 import React from "react";
 import Badge from 'react-bootstrap/Badge';
-import {Row, Col, Container} from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import './CareerPaths.css'
-import Image from '../../assets/astronaut.svg';
+import SkillProgress from "../landing/SkillProgress";
+// import Image from '../../assets/astronaut.svg';
 
 const CareerPaths = () => {
-    return(
-        <Container className="home">
-            <div>
-            <h1>
-        Career Paths <Badge bg="secondary">Astronaut</Badge>
-      </h1>
+    return (
+        <Container className="home px-5">
+            <div className="px-5">
+                <h1>
+                    Career Path: <Badge bg="secondary">Astronaut</Badge>
+                </h1>
             </div>
             <Row>
                 <Col md={6} sm={12} xs={12} className="text-center px-5">
-                <img  className="pt-5"src={Image} alt={Image} />
+                    <img className="w-100" src="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" alt="https://i.pinimg.com/originals/5f/7e/46/5f7e46e91c0ba333ae7872bbee5ccc83.gif" />
                     <Container fluid className="text-center w-75 w-md-50 mt-5 p-0">
                     </Container>
                 </Col>
-                <Col md={6} sm={12} xs={12} className="right-side">
-                    <div>
+                <Col md={6} sm={12} xs={12} className="right-side center-it">
+                    <div className="w100">
                         <p className="text-decoration-underline">Aptitudini necesare</p>
                         <Row>
-                            <Col md={2} sm={12} xs={12} className="right-side">
+                            <Col md={3} sm={12} xs={12} className="right-side">
                                 <p>Mate</p>
-                               
+
                             </Col>
-                            <Col md={5}>
-                             <ProgressBar animated now={85}/>
+                            <Col md={8}>
+                                <ProgressBar animated now={85} />
                             </Col>
                         </Row>
                         <Row>
-                          <Col md={2} sm={12} xs={12} className="right-side">
-                             <p>Logica</p>
-                          </Col>
-                          <Col md={5}>
-                            <ProgressBar animated now={25} />
-                          </Col>
+                            <Col md={3} sm={12} xs={12} className="right-side">
+                                <p>Logica</p>
+                            </Col>
+                            <Col md={8}>
+                                <ProgressBar animated now={25} />
+                            </Col>
                         </Row>
                         <Row>
-                        <Col md={2} sm={12} xs={12} className="right-side">
-                             <p>Fizica</p>
-                          </Col>
-                          <Col md={5}>
-                            <ProgressBar animated now={45} />
-                          </Col>
+                            <Col md={3} sm={12} xs={12} className="right-side">
+                                <p>Fizica</p>
+                            </Col>
+                            <Col md={8}>
+                                <ProgressBar animated now={45} />
+                            </Col>
                         </Row>
-                        
-                        <a href="/rules">Citește regulamentul!</a>
                     </div>
                 </Col>
             </Row>
+            <Row>
+                <Col>
+                    <SkillProgress now={30} title={"Astronaut"} levels={{
+                        "L1": ["Astronaut"],
+                        "L2": ["Racheta"],
+                        "L3": ["Space Battle minigame"]
+                    }} />
+                </Col>
+            </Row>
+            <br />
+            <br />
+            <br />
         </Container>
     );
 }

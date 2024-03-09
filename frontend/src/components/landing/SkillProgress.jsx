@@ -33,7 +33,7 @@ const SkillProgressLabel = ({ percentage, downLabel, topLabel }) => {
   );
 };
 
-const SkillProgress = ({ title, levels }) => {
+const SkillProgress = ({ title, levels, now }) => {
   return (
     <Stack>
       <Stack
@@ -57,7 +57,7 @@ const SkillProgress = ({ title, levels }) => {
             />
           ))}
           <ProgressBar
-            now={Math.floor(Math.random() * 41) + 30}
+            now={now !== undefined ? now : Math.floor(Math.random() * 41) + 30}
             style={{ width: "100%" }}
           />
         </div>
