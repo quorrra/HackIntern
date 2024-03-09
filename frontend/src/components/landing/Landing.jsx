@@ -58,33 +58,45 @@ function Landing() {
           </Container>
         </Navbar>
       ))}
-      <Container>
-        <div className="d-flex justify-content-center gap-5">
-          <div className="ms-6">
-            <img className="pt-5" src={Image} alt="LandingImage" />
+      <Container className="p-5">
+        <Container>
+          <div className="d-flex justify-content-center gap-5">
+            <div className="ms-6">
+              <img className="pt-5" src={Image} alt="LandingImage" />
+            </div>
+            <div className="m-5 pb-5 ">
+              <h1>Learn-IT-all</h1>
+              <p>
+                În lumea magică a Learn-It-All, copiii devin eroi ai
+                cunoașterii! Aici, ei își creează propriul lor personaj și își
+                cresc puterile (adică cunoștințele) rezolvând teste distractive
+                și jucându-se. Cu cât trec mai multe teste, cu atât devin mai
+                puternici și deblochează cariere grozave! De la explorarea
+                matematicii până la aventurile în lumea cărților, Learn-It-All
+                îi ajută pe copii să-și urmeze visurile și să devină mari!
+              </p>
+            </div>
           </div>
-          <div className="m-5 pb-5 ">
-            <h1>Learn-IT-all</h1>
-            <p>
-              În lumea magică a Learn-It-All, copiii devin eroi ai cunoașterii!
-              Aici, ei își creează propriul lor personaj și își cresc puterile
-              (adică cunoștințele) rezolvând teste distractive și jucându-se. Cu
-              cât trec mai multe teste, cu atât devin mai puternici și
-              deblochează cariere grozave! De la explorarea matematicii până la
-              aventurile în lumea cărților, Learn-It-All îi ajută pe copii să-și
-              urmeze visurile și să devină mari!
-            </p>
-          </div>
+        </Container>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+          <h2 style={{ fontSize: "2.5rem" }}>Skills</h2>
+          <Stack gap={5}>
+            {skills.map((skill, id) => {
+              const skillName = Object.keys(skill)[0];
+              console.log(skillName);
+              return (
+                <SkillProgress title={skillName} levels={skill[skillName]} />
+              );
+            })}
+          </Stack>
         </div>
       </Container>
-      <Stack gap={5}>
-        <h3>Skills</h3>
-        {skills.map((skill, id) => {
-          const skillName = Object.keys(skill)[0];
-          console.log(skillName);
-          return <SkillProgress title={skillName} levels={skill[skillName]} />;
-        })}
-      </Stack>
     </>
   );
 }
