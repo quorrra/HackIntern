@@ -8,8 +8,12 @@ import React from "react";
 import Image from "../../assets/landingpoza.svg";
 
 import "./LandingStyle.css";
+import Stack from "react-bootstrap/Stack";
+import data from "../../assets/cp.json";
+import SkillProgress from "./SkillProgress";
 
 function Landing() {
+  const { skills } = data;
   return (
     <>
       {["md"].map((expand) => (
@@ -73,6 +77,14 @@ function Landing() {
           </div>
         </div>
       </Container>
+      <Stack gap={5}>
+        <h3>Skills</h3>
+        {skills.map((skill, id) => {
+          const skillName = Object.keys(skill)[0];
+          console.log(skillName);
+          return <SkillProgress title={skillName} levels={skill[skillName]} />;
+        })}
+      </Stack>
     </>
   );
 }
