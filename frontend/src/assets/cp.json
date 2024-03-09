@@ -1,29 +1,84 @@
 {
-    "paths": [
-        {
-            "Programator": {
-                "skills": ["Matematica", "Logica", "TIC"]
-            }
-        },
-        {
-            "Astronaut": {
-                "skills": ["Matematica", "Fizica", "Spatiu"]
-            }
-        },
-        {
-            "Lica Samadaul": {
-                "skills": ["Psihologie", "Manipulare", "Porcarie"]
-            }
-        }
-    ],
-    "skills": [
-        "Matematica",
-        "Logica",
-        "TIC",
-        "Fizica",
-        "Spatiu",
-        "Psihologie",
-        "Manipulare",
-        "Porcarie"
-    ]
+  "paths": [
+    {
+      "Programator": {
+        "skills": ["Matematica", "Logica", "TIC"],
+        "cardImage": "https://w0.peakpx.com/wallpaper/582/516/HD-wallpaper-linux-programmer-pixel-art-linux-computer-hacker-pixel-8-bit.jpg",
+        "slugCareer": "programator"
+      }
+    },
+    {
+      "Astronaut": {
+        "skills": ["Matematica", "Fizica", "Spatiu"],
+        "cardImage": "https://static.vecteezy.com/system/resources/previews/022/906/888/original/an-astronaut-in-pixel-art-style-vector.jpg",
+        "slugCareer": "astronaut"
+      }
+    },
+    {
+      "Lica Samadaul": {
+        "skills": ["Psihologie", "Manipulare", "Porcarie"],
+        "cardImage": "/ionut.jpg",
+        "slugCareer": "lica_samdau"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "Matematica": {
+        "L1": ["Programator"],
+        "L2": ["Game developer"],
+        "L3": ["Engineer"]
+      }
+    },
+    {
+      "Logica": {
+        "L1": ["Philosopher"],
+        "L2": ["Game developer"],
+        "L3": ["Engineer"],
+        "L4": ["a lil special"]
+      }
+    },
+    {
+      "TIC": {
+        "L1": ["Data Analyst"],
+        "L2": ["System Administrator"],
+        "L3": ["Network Engineer"]
+      }
+    },
+    {
+      "Fizica": {
+        "L1": ["Research Scientist"],
+        "L2": ["Physics Teacher"],
+        "L3": ["Lab Technician"]
+      }
+    },
+    {
+      "Spatiu": {
+        "L1": ["Astronaut"],
+        "L2": ["Astrophysicist"],
+        "L3": ["Space Engineer"]
+      }
+    },
+    {
+      "Psihologie": {
+        "L1": ["Counseling Psychologist"],
+        "L2": ["Clinical Psychologist"],
+        "L3": ["School Psychologist"]
+      }
+    },
+    {
+      "Manipulare": {
+        "L1": ["Marketing Specialist"],
+        "L2": ["Public Relations Specialist"],
+        "L3": ["Sales Manager"]
+      }
+    },
+    {
+      "Porcarie": {
+        "L1": ["Waste Management Specialist"],
+        "L2": ["Recycling Coordinator"],
+        "L3": ["Sanitation Engineer"]
+      }
+    }
+  ]
 }

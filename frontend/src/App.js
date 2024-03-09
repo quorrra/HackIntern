@@ -1,9 +1,10 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Landing from "./components/landing/Landing";
 import Test from "./components/tests/Test";
 import Check from "./components/tests/check/Check";
+import CareerList from "./components/CareerList/CareerList";
 
 function App() {
   return (
@@ -15,10 +16,8 @@ function App() {
             <Route path="/" exact element={<Landing />} />
             <Route path="/test" exact element={<Test />} />
             <Route path="/check" exact element={<Check />} />
-            <Route
-              path="*"
-              element={<Navigate to="/" />}
-            />
+            <Route path="/careerList" exact element={<CareerList />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
       </div>
