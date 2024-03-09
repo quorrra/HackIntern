@@ -1,0 +1,21 @@
+.home
+{
+
+font-family: "Kanit";
+}
+.text-decoration-underline{
+
+        font-weight: 700;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        padding-bottom: 70px;
+}
+
+.right-side
+{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+ html, body{
+    background-color: whitesmoke;
+ }
