@@ -14,7 +14,7 @@ const CareerPaths = () => {
 
   return (
     <Container className="home px-5">
-      <div className="px-5">
+      <div className="px-5 pb-5">
         <h1>
           Career Path: <Badge bg="secondary">Astronaut</Badge>
         </h1>
@@ -80,13 +80,17 @@ const CareerPaths = () => {
                 <ProgressBar animated now={45} />
               </Col>
             </Row>
+            <Row>
+                <Button className="py-3 hk-thin" href={"/test"} variant="info">Rezolva urmatorul test!</Button>
+            </Row>
+
           </div>
         </Col>
       </Row>
-      <Row>
+      <Row className="pt-5">
         <Col>
           <SkillProgress
-            now={percentage === null ? 30 : percentage}
+            now={percentage === null ? 50 : percentage}
             title={"Astronaut"}
             levels={{
               L1: ["Astronaut"],
