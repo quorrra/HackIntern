@@ -1,0 +1,29 @@
+{
+    "paths": [
+        {
+            "Programator": {
+                "skills": ["Matematica", "Logica", "TIC"]
+            }
+        },
+        {
+            "Astronaut": {
+                "skills": ["Matematica", "Fizica", "Spatiu"]
+            }
+        },
+        {
+            "Lica Samadaul": {
+                "skills": ["Psihologie", "Manipulare", "Porcarie"]
+            }
+        }
+    ],
+    "skills": [
+        "Matematica",
+        "Logica",
+        "TIC",
+        "Fizica",
+        "Spatiu",
+        "Psihologie",
+        "Manipulare",
+        "Porcarie"
+    ]
+}
