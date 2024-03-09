@@ -1,26 +1,104 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import React from "react";
-import {Row, Image, Col, Container} from "react-bootstrap";
-import './Landing.css'
+//import image froma ssets
+import Image from "../../assets/landingpoza.svg";
 
-const Landing = () => {
-    return(
-        <Container className="home">
-            <Row>
-                <Col md={6} sm={12} xs={12} className="text-center px-5">
-                    <Image className="mx-auto w-75 w-md-50" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Red_square.svg" alt="https://upload.wikimedia.org/wikipedia/commons/2/27/Red_square.svg"></Image>
-                    <Container fluid className="text-center w-75 w-md-50 mt-5 p-0">
-                    </Container>
-                </Col>
-                <Col md={6} sm={12} xs={12} className="right-side">
-                    <div>
-                        <p className="large-text">Vânătoarea de comori a început!</p>
-                        <p className="text">Îți place să rezolvi ghicitori, să explorezi noi locuri sau să îți testezi ingeniozitatea printr-o serie de jocuri? Treasure Hunt Bucharest este atât un concurs dedicat persoanelor pasionate de mistere și provocări, cât și o ocazie de a petrece o zi plăcută alături de prieteni.</p>
-                        <a href="/rules">Citește regulamentul!</a>
-                    </div>
-                </Col>
-            </Row>
+import "./LandingStyle.css";
+import Stack from "react-bootstrap/Stack";
+import data from "../../assets/cp.json";
+import SkillProgress from "./SkillProgress";
+
+function Landing() {
+  const { skills } = data;
+  return (
+    <>
+      {["md"].map((expand) => (
+        <Navbar
+          key={expand}
+          expand={expand}
+          className="bg-body-tertiary mb-3 justify-content-center"
+        >
+          <Container fluid>
+            <Navbar.Brand href="#">Learn-IT-all</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-center flex-grow-1 pe-3">
+                  <NavDropdown
+                    title={<span style={{ color: "blue" }}>Career Paths</span>}
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action3">
+                      Programator
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Astronaut
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action5">
+                      Lică Sămădău
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#action1">Skills</Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+      <Container className="p-5">
+        <Container>
+          <div className="d-flex justify-content-center gap-5">
+            <div className="ms-6">
+              <img className="pt-5" src={Image} alt="LandingImage" />
+            </div>
+            <div className="m-5 pb-5 ">
+              <h1>Learn-IT-all</h1>
+              <p>
+                În lumea magică a Learn-It-All, copiii devin eroi ai
+                cunoașterii! Aici, ei își creează propriul lor personaj și își
+                cresc puterile (adică cunoștințele) rezolvând teste distractive
+                și jucându-se. Cu cât trec mai multe teste, cu atât devin mai
+                puternici și deblochează cariere grozave! De la explorarea
+                matematicii până la aventurile în lumea cărților, Learn-It-All
+                îi ajută pe copii să-și urmeze visurile și să devină mari!
+              </p>
+            </div>
+          </div>
         </Container>
-    );
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+          <h2 style={{ fontSize: "2.5rem" }}>Skills</h2>
+          <Stack gap={5}>
+            {skills.map((skill, id) => {
+              const skillName = Object.keys(skill)[0];
+              console.log(skillName);
+              return (
+                <SkillProgress title={skillName} levels={skill[skillName]} />
+              );
+            })}
+          </Stack>
+        </div>
+      </Container>
+    </>
+  );
 }
 
-export default Landing
+export default Landing;
