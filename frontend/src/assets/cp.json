@@ -2,17 +2,23 @@
   "paths": [
     {
       "Programator": {
-        "skills": ["Matematica", "Logica", "TIC"]
+        "skills": ["Matematica", "Logica", "TIC"],
+        "cardImage": "https://w0.peakpx.com/wallpaper/582/516/HD-wallpaper-linux-programmer-pixel-art-linux-computer-hacker-pixel-8-bit.jpg",
+        "slugCareer": "programator"
       }
     },
     {
       "Astronaut": {
-        "skills": ["Matematica", "Fizica", "Spatiu"]
+        "skills": ["Matematica", "Fizica", "Spatiu"],
+        "cardImage": "https://static.vecteezy.com/system/resources/previews/022/906/888/original/an-astronaut-in-pixel-art-style-vector.jpg",
+        "slugCareer": "astronaut"
       }
     },
     {
       "Lica Samadaul": {
-        "skills": ["Psihologie", "Manipulare", "Porcarie"]
+        "skills": ["Psihologie", "Manipulare", "Porcarie"],
+        "cardImage": "/ionut.jpg",
+        "slugCareer": "lica_samdau"
       }
     }
   ],
