@@ -6,9 +6,11 @@ on:
 jobs:
   first-job:
     name: testing deploy
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: print greeting
-        run: echo "hello world"
+        run: |
+          echo hello world
+          uname -a
     
 
