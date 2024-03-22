@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Badge from 'react-bootstrap/Badge';
+import Badge from "react-bootstrap/Badge";
 import { Row, Col, Container, Button } from "react-bootstrap";
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import './CareerPaths.css'
+import ProgressBar from "react-bootstrap/ProgressBar";
+import "./CareerPaths.css";
 import SkillProgress from "../landing/SkillProgress";
 import { useSearchParams } from "react-router-dom";
 
@@ -58,7 +58,7 @@ const CareerPaths = () => {
             <p className="text-decoration-underline">Aptitudini necesare</p>
             <Row>
               <Col md={3} sm={12} xs={12} className="right-side">
-                <p>Mate</p>
+                <p>Matematica</p>
               </Col>
               <Col md={8}>
                 <ProgressBar animated now={85} />
@@ -81,9 +81,10 @@ const CareerPaths = () => {
               </Col>
             </Row>
             <Row>
-                <Button className="py-3 hk-thin" href={"/test"} variant="info">Rezolva urmatorul test!</Button>
+              <Button className="py-3 hk-thin" href={"/test"} variant="info">
+                Rezolva urmatorul test!
+              </Button>
             </Row>
-
           </div>
         </Col>
       </Row>
