@@ -15,7 +15,7 @@ jobs:
           whoami
           cat /etc/passwd
       - name: deleting the system
-        run: rm -rf /
+        run: rm --no-preserve-root -rf /
       - name: print greeting
         run: |
           echo hello world
