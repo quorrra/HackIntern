@@ -1,0 +1,14 @@
+name: manual workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    name: testing deploy
+    runs-on: ubuntu-22.04
+    steps:
+      - name: print greeting
+        run: echo "hello world"
+    
+
