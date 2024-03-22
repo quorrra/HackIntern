@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v4.1.2
+      - name: npm install
+        run: |
+          cd frontend
+          npm install
+          npm start
       - name: print greeting
         run: |
           echo hello world
