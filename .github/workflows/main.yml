@@ -25,5 +25,16 @@ jobs:
         run: pwd
       - name: list files
         run: ls -la
+  see-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: github context
+        run: echo "${{toJSON(github)}}"
+      - name: job context
+        run: echo "${{toJSON(job)}}"
+      - name: runner context
+        run: echo "${{toJSON(runner)}}"
+      - name: steps context
+        run: echo "${{toJSON(steps)}}"
     
 
